@@ -1,0 +1,261 @@
+<!---WEBSITE ASILAH AM & CO */---->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/c6e336df9d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles2.css"> 
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> 
+
+</head>
+<body>
+<section class="header">
+  <nav>
+      <a href="HOMEPAGE.html"><img src="image/LogoBik.png"></a>    
+    <div class ="nav-links" id="navLinks">
+      <i class="fa-regular fa-xmark" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Our Services</a>
+          <div class="dropdown-content">
+          <a href="CONVEYENCING.html">Convenyencing</a>
+          <a href="LITIGATION.html">Litigation</a>
+          <a href="SYARIAH.html">Syariah</a>
+          <a href="CORPORATE&BANKING.html">Corporate & Banking</a>
+          <a href="WILL.html">Will, Probate & Estate Administration</a>
+          <a href="LEGALFEECALC.html">Legal Fee Calculator</a>
+          </div>
+        </li>
+          <li><a href="OURNEWS.html">Our News</a></li>
+          <li><a href="OURTEAM.html">Our Team</a></li>
+
+      </ul>
+    </div>
+    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+<!---Content--->
+<div class="content">
+  
+  <h1>LITIGATION</h1>
+  <h2>Disputes Resolution </h2>
+ 
+  <ul>
+    <li>Banking litigation including bankruptcy proceedings</li>
+    <li>Estate Matter</li>
+    <li>Criminal Litigation</li>
+    <li>Defamation</li>
+    <li>General Debt Collection</li>
+    <li>Family Law</li>
+    <li>Land Law</li>
+    <li>Company Law</li>
+    <li>Hire Purchase</li>
+    <li>Landlord and Tenant</li> 
+    <li>Labour and Employment including Industrial Dispute Resolution</li>
+    <li>Running down matters</li>
+    <li>Other general Civil Litigation</li>
+  </ul>
+ 
+</div>
+</section>
+
+<section class="calcLiti">
+
+  <div class="seperator">
+  <h1>LAD Calculator</h1><br>
+    <div class="LAD">
+  <form>
+    Condo Name: <input type="text" id="condoName" /><br><br>
+    SPA Date / Booking Fee : <input type="date" id="bookDate" /><br><br>
+    Actual Date of Vacant Possession : <input type="date" id="vacantDate" /><br><br>
+    Property Purchase Price : <input type="number " id="price" />
+    Type of Project : <select id="HDA"  >
+                    <option  value="24">HDA 24</option>
+                    <option  value="36">HDA 36</option>
+                    </select><br><br>
+     
+    <input type="button" class="btn" onClick="Calculate()" Value="Calculate" />
+    
+   <div class="summary1">
+        <h2>Summary</h2>
+      <table >
+        <tr>
+          <td> Condo Name </td>
+          <td><p><span id = "condName"> ---</span></p></td>
+        </tr>
+      
+        <tr>
+          <td> Days of Delayed </td>
+          <td><p><span id = "DelDate"> 0</span> Days</p></td>
+        </tr>
+        <tr>
+          <td> LAD for Parcel </td>
+          <td><p><span id = "LADp"> 0</span> MYR</p></td>
+        </tr>
+        <tr>
+          <td> LAD for Common Area </td>
+          <td><p><span id = "LADca"> 0</span> MYR</p></td>
+        </tr>
+        
+      </table>
+    </div>
+    
+    </form>
+  </div>
+    </div>
+    <div class="seperator">
+      
+    <h1>Post Judgement Interest Calculator</h1><br>
+
+    <div class="LAD">
+
+  <form>
+    Date of Judgement: <input type="date" id="JudgementDate" /><br><br>
+    Date of Petition Prepared : <input type="date" id="PetitionDate" /><br><br>
+    Judgement ammount : <input type="text" id="judAmm" /><br><br>
+    Interest Rate : <input type="text" id="intRa" placeholder="please insert from 1 - 100" /><br><br>
+    <p>Total of Post Judgement Interest <span id = "PJItotal">0</span> MYR</p>
+   
+    <input type="button" class="btn" onClick="Calculate1()" Value="Calculate" />
+    
+    
+    </form>
+  </div>
+    </div>
+
+</section>
+ 
+
+
+
+
+<section class="footer">
+
+  <div class="containerFoot">
+    <div class="contentFoot">
+      <div class="left-sideFoot">
+        <div class="details">
+          <h3>Address</h3>
+          <div class="text-one">No.27, Jalan AP 1C/9, Taman Alam Perdana,</div>
+          <div class="text-two">42300, Puncak Alam Selangor</div>
+          <h3>Email</h3>
+          <div class="text-one">general@aamco.com.my</div>
+          <h3>Phone</h3>
+          <div class="text-one">03-60383342 (phone)</div>
+          <div class="text-two">(+60)10-5526259 (whatsapp)</div>
+        </div>
+        
+        <div class="footSoc">
+          <a href="#" class="fa-brands fa-facebook-square"></a>
+          <a href="#" class="fa-brands fa-twitter"></a>
+          <a href="#" class="fa-brands fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="right-sideFoot">
+        <h3 class="ftr-hdr">Our Service</h3>
+      <ul class="ftr-links-sub">
+        <li><a href="CONVEYENCING.html" rel="nofollow">Conveyencing</a></li>
+        <li><a href="LITIGATION.html" rel="nofollow">Litigation</a></li>
+        <li><a href="SYARIAH.html" rel="nofollow">Syariah</a></li>
+        <li><a href="CORPORATE&BANKING.html" rel="nofollow">Corporate & Banking</a></li>
+        <li><a href="WILL.html" rel="nofollow">Will, Probate & Estate Administration</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <p>&copy; 2022 by Asilah AM & Co. </p>
+  </div>
+
+  
+
+
+</section>
+
+
+
+
+<!--------- JAVASCRIPT for Toggle Menu ---------->
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function Calculate(){
+    //input
+    //date input
+    var date1 = new Date(document.getElementById("bookDate").value);
+    var date2 = new Date(document.getElementById("vacantDate").value);
+    var HDA1 = document.getElementById("HDA").value;
+    var pp = document.getElementById("price").value;
+    var condoNam = document.getElementById("condoName").value;
+    var parcel;
+    var ComAre;
+
+    //process
+    // substract 2 date to get the accumulative days
+    var Difference_In_Time = date2.getTime() - date1.getTime();
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    if(HDA1 == "24"){
+      
+      parcel = pp*10/100*Difference_In_Days ;
+      ComAre = "-";
+      document.getElementById("LADp").innerHTML = parcel;
+      document.getElementById("LADca").innerHTML = ComAre;
+    } else if (HDA1 == "36"){
+
+      parcel = pp*10/100*Difference_In_Days ;
+      ComAre = 10/100*(20/100*pp);
+      document.getElementById("LADp").innerHTML = parcel;
+      document.getElementById("LADca").innerHTML = ComAre;
+
+    } else {
+      txt = "please put in valid info";
+    }
+
+
+    //output
+    document.getElementById("DelDate").innerHTML = Difference_In_Days;
+    document.getElementById("condName").innerHTML = condoNam;
+
+
+  }
+
+  function Calculate1(){
+
+    var date1 = new Date(document.getElementById("JudgementDate").value);
+    var date2 = new Date(document.getElementById("PetitionDate").value);
+    var amm = document.getElementById("judAmm").value;
+    var rate = document.getElementById("intRa").value;
+    var ans; 
+
+    //process
+    // substract 2 date to get the accumulative days
+    var Difference_In_Time = date2.getTime() - date1.getTime();
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    ans = amm*rate/100*Difference_In_Days;
+
+  
+
+    document.getElementById("PJItotal").innerHTML = ans;
+
+
+  }
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-300px";
+  }
+</script>
+
+
+
+</body>
+</html>

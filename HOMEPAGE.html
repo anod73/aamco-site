@@ -1,0 +1,201 @@
+<!---WEBSITE ASILAH AM & CO */---->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/c6e336df9d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css"> 
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> 
+
+</head>
+<body>
+<section class="header">
+  <nav>
+      <a href="HOMEPAGE.html"><img src="image/LogoBik.png"></a>    
+    <div class ="nav-links" id="navLinks">
+      <i class="fa-regular fa-xmark" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Our Services</a>
+          <div class="dropdown-content">
+          <a href="CONVEYENCING.html">Convenyencing</a>
+          <a href="LITIGATION.html">Litigation</a>
+          <a href="SYARIAH.html">Syariah</a>
+          <a href="CORPORATE&BANKING.html">Corporate & Banking</a>
+          <a href="WILL.html">Will, Probate & Estate Administration</a>
+          <a href="LEGALFEECALC.html">Legal Fee Calculator</a>
+          </div>
+        </li>
+          <li><a href="OURNEWS.html">Our News</a></li>
+          <li><a href="OURTEAM.html">Our Team</a></li>
+
+      </ul>
+    </div>
+    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+  <div class="frontpage">
+
+
+      <h1>ASILAH AM & CO.</h1>
+      <h2>_______ Advocate and Solicitor</h2>
+      <p>"Trust Your Law Case To Our Experienced Team"</p>
+    
+  </div>
+
+</section>
+ 
+<!---Content--->
+<section class="philo">
+  
+  <h1><span style="color: #e6b535;">Our</span> Philopsophy</h1>
+  <p>It has always been <span style="color: #e6b535;">Asilah AM & Co.</span> vision to avail quality legal services to everyone, from the poorest to the corporate giant. Dedication, patience and knowledge are just a few of the redeeming qualities our Lawyers possess. Our vision is to dedicate ourselves to serve our clients with Integrity, Humanity, Efficient, Professional and knowledgeable manner.</p> 
+
+</section>
+
+<!--Services-->
+<section class="services">
+  <div class="services-con">
+    <h1><span style="color: #e6b535;">Our</span> Services</h1>
+    <p>Services that we provide.</p>
+  </div>
+
+  <div class="row">
+    <div class="service-col">
+      <div class="service-inn">
+        <h3>Conveyencing</h3>
+      </div>
+    </div>
+    <div class="service-col">
+      <div class="service-inn">
+        <h3>Litigation</h3>
+      </div>
+    </div>
+    <div class="service-col">
+      <div class="service-inn">
+      <h3>Syariah</h3>
+    </div></div>
+    <div class="service-col">
+      <div class="service-inn">
+        <h3>Corporate and Banking</h3>
+      </div>
+    </div>
+    <div class="service-col">
+      <div class="service-inn">
+        <h3>Will, Probate & Estate Administration </h3>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact-us">
+  <div class="contactUsW">
+    <h1>Have Some Question?<span style="color: #e6b535;"> Contact Us</span></h1>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <div class="right-side">
+        <p>Send us Inquiries/ Message/ Feedback :</p>
+        <form onsubmit="sendEmail() ">
+        <div class="input-box">
+          <input type="name" placeholder="Enter your name">
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Enter your email">
+        </div>
+        <div class="input-box message-box">
+          <input type="message" placeholder="Enter your Inquiries/Message/Feedback">
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="footer">
+
+  <div class="containerFoot">
+    <div class="contentFoot">
+      <div class="left-sideFoot">
+        <div class="details">
+          <h3>Address</h3>
+          <div class="text-one">No.27, Jalan AP 1C/9, Taman Alam Perdana,</div>
+          <div class="text-two">42300, Puncak Alam Selangor</div>
+          <h3>Email</h3>
+          <div class="text-one">general@aamco.com.my</div>
+          <h3>Phone</h3>
+          <div class="text-one">03-60383342 (phone)</div>
+          <div class="text-two">(+60)10-5526259 (whatsapp)</div>
+        </div>
+        
+        <div class="footSoc">
+          <a href="#" class="fa-brands fa-facebook-square"></a>
+          <a href="#" class="fa-brands fa-twitter"></a>
+          <a href="#" class="fa-brands fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="right-sideFoot">
+        <h3 class="ftr-hdr">Our Service</h3>
+      <ul class="ftr-links-sub">
+        <li><a href="CONVEYENCING.html" rel="nofollow">Conveyencing</a></li>
+        <li><a href="LITIGATION.html" rel="nofollow">Litigation</a></li>
+        <li><a href="SYARIAH.html" rel="nofollow">Syariah</a></li>
+        <li><a href="CORPORATE&BANKING.html" rel="nofollow">Corporate & Banking</a></li>
+        <li><a href="WILL.html" rel="nofollow">Will, Probate & Estate Administration</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <p>&copy; 2022 by Asilah AM & Co. </p>
+  </div>
+
+  
+
+
+</section>
+
+
+
+
+<!--------- JAVASCRIPT for Toggle Menu ---------->
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-300px";
+  }
+</script>
+<!-----JS for sending emails-->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail(){
+    Email.send({
+          Host : "smtp.yourisp.com",
+          Username : "username",
+          Password : "password",
+          To : 'general@ann-associates.com.my',
+          From : "you@isp.com",
+          Subject : "This is the subject",
+          Body : "And this is the body"
+      }).then(
+        message => alert(message)
+      );
+  }
+</script>
+</body>
+</html>
+

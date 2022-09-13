@@ -1,0 +1,310 @@
+<!---WEBSITE ASILAH AM & CO */---->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/c6e336df9d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles2.css"> 
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> 
+</head>
+<body>
+<section class="header">
+  <nav>
+      <a href="HOMEPAGE.html"><img src="image/LogoBik.png"></a>    
+    <div class ="nav-links" id="navLinks">
+      <i class="fa-regular fa-xmark" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Our Services</a>
+          <div class="dropdown-content">
+          <a href="CONVEYENCING.html">Convenyencing</a>
+          <a href="LITIGATION.html">Litigation</a>
+          <a href="SYARIAH.html">Syariah</a>
+          <a href="CORPORATE&BANKING.html">Corporate & Banking</a>
+          <a href="WILL.html">Will, Probate & Estate Administration</a>
+          <a href="LEGALFEECALC.html">Legal Fee Calculator</a>
+          </div>
+        </li>
+          <li><a href="OURNEWS.html">Our News</a></li>
+          <li><a href="OURTEAM.html">Our Team</a></li>
+
+      </ul>
+    </div>
+    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+<!---Content--->
+<div class="content">
+  
+  <h1>CONVEYENCING</h1>
+  <h2>Asset and Estate Matters </h2>
+ 
+  <ul>
+    <li>Sale and Purchase</li>
+    <li>Leases and tenancies of commercial properties</li>
+    <li>Assignment and vesting of rights in properties</li>
+    <li>Alienation, sub-division, partitioning, amalgamation of title</li>
+    <li>Land development projects</li>
+    <li>Strata titles</li>
+    <li>Applications to relevant authorities in respect of land conversions</li>
+    <li>Real property gains tax</li>
+    <li>Charges, caveats, liens</li>
+    <li>Financing of property purchase and security</li> 
+    <li>Forfeiture and compulsory acquisition</li>
+  </ul>
+ 
+</div>
+</section>
+
+
+<section class ="LegFeeCalc">
+  <p>The calculation formula for Legal Fee & Stamp Duty is fixed as they are governed by law</p>
+  <br>
+  <div class="seperator">
+      
+    <h1>Legal Fee Calculator</h1>
+    <i class="fa-solid fa-circle-question" onclick="showInfo()"></i>
+
+    <div id="myDIV" class="hide">
+    
+      <h3>Legal Fee Calculation Formula</h3>
+      <br>
+   
+      <table class="table">
+      <tr>
+        <th>Formula</th>
+        <th>Rate</th>
+      </tr>
+      <tr>
+        <td>For the first RM500,000</td>
+        <td>1.0%</td>
+      </tr>
+      <tr>
+        <td>For the next RM500,000</td>
+        <td>0.8%</td>
+      </tr>
+      <tr>
+        <td>For the first RM2,000,000</td>
+        <td>0.7%</td>
+      </tr>
+      <tr>
+        <td>For the next RM2,000,000</td>
+        <td>0.6%</td>
+      </tr>
+      <tr>
+        <td>For the next RM2,500,000</td>
+        <td>0.5%</td>
+      </tr>
+      <tr>
+        <td>Subsequent Purchase Price</td>
+        <td>Negotiable (Subject to maximum 0.5%)</td>
+      </tr>
+    </table> 
+    </div>
+    <form class="form">
+      Property Purchase Price : <input type="text" id="firstNumber" /><br>
+      <p>Total Legal Fees Payable  : 
+        <span class="formResult" id = "result"></span>
+        </p>
+      <input type="button" class="btn" onClick="Calculate()" Value="Calculate" />
+    </form>
+  </div>
+  <div class="seperator">
+
+      <h1>Stamp Duty Calculator</h1>
+      <i class="fa-solid fa-circle-question" onclick="showInfo1()"></i>
+
+      <div id="StampD" class="hide">
+        <h3>Stamp Duty Calculation</h3>
+        <br>
+        <table class="table">
+        <tr>
+          <th>Formula</th>
+          <th>Rate</th>
+        </tr>
+        <tr>
+          <td>First RM100,000</td>
+          <td>1%</td>
+        </tr>
+        <tr>
+          <td>Next RM400,000</td>
+          <td>2%</td>
+        </tr>
+        <tr>
+          <td>Next RM500,000</td>
+          <td>3%</td>
+        </tr>
+        <tr>
+          <td>Thereafter</td>
+          <td>4%</td>
+        </tr>
+        
+        
+      </table>
+      </div>
+      <form class="form">
+        Property Selling Price : <input type="text" id="stampNum" /><br>
+        <p>Total Stamp Duty : 
+          <span class="formResult" id = "result1"></span>
+          </p>
+        <input type="button" class="btn" onClick="Calculate1()" Value="Calculate" />
+        </form>
+      </div>
+      <div class="seperator">
+        <h1>Stamp Duty - Loan Calculator</h1>
+      <i class="fa-solid fa-circle-question" onclick="showInfo2()"></i>
+
+      <div id="StampDLo" class="hide">
+        <h3>Stamp Duty Calculation</h3>
+        <br>
+        <p>Loan Sum x 0.5% Note: Please note that the above formula merely provides estimated stamp duty. The actual stamp duty will be rounded up according to the Stamp Act.</p>
+        
+      </div>
+      <form class="form">
+        Property Selling Price : <input type="text" id="stampLoaNum" /><br>
+        <p>Total Stamp Duty : 
+          <span class="formResult" id = "result2"></span>
+          </p>
+        <input type="button" class="btn" onClick="Calculate2()" Value="Calculate" />
+        </form>
+      </div>
+
+
+</section>
+
+
+
+
+
+
+<section class="footer">
+
+  <div class="containerFoot">
+    <div class="contentFoot">
+      <div class="left-sideFoot">
+        <div class="details">
+          <h3>Address</h3>
+          <div class="text-one">No.27, Jalan AP 1C/9, Taman Alam Perdana,</div>
+          <div class="text-two">42300, Puncak Alam Selangor</div>
+          <h3>Email</h3>
+          <div class="text-one">general@aamco.com.my</div>
+          <h3>Phone</h3>
+          <div class="text-one">03-60383342 (phone)</div>
+          <div class="text-two">(+60)10-5526259 (whatsapp)</div>
+        </div>
+        
+        <div class="footSoc">
+          <a href="#" class="fa-brands fa-facebook-square"></a>
+          <a href="#" class="fa-brands fa-twitter"></a>
+          <a href="#" class="fa-brands fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="right-sideFoot">
+        <h3 class="ftr-hdr">Our Service</h3>
+      <ul class="ftr-links-sub">
+        <li><a href="CONVEYENCING.html" rel="nofollow">Conveyencing</a></li>
+        <li><a href="LITIGATION.html" rel="nofollow">Litigation</a></li>
+        <li><a href="SYARIAH.html" rel="nofollow">Syariah</a></li>
+        <li><a href="CORPORATE&BANKING.html" rel="nofollow">Corporate & Banking</a></li>
+        <li><a href="WILL.html" rel="nofollow">Will, Probate & Estate Administration</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <p>&copy; 2022 by Asilah AM & Co. </p>
+  </div>
+
+  
+
+
+</section>
+
+
+
+
+<!--------- JAVASCRIPT for Toggle Menu ---------->
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function Calculate(){
+    var num1 = parseInt(document.getElementById("firstNumber").value);
+    var ans;
+
+        if (num1 <= 500000){
+           ans = num1*1/100;
+        } else if (num1 >= 500001 && num1 <= 1000000){
+           ans = num1*0.8/100;
+        }  else if (num1 >= 1000001 && num1 <= 3000000){
+           ans = num1*0.7/100;
+        }  else if (num1 >= 3000001 && num1 <= 5000000){
+           ans = num1*0.6/100;
+        }  else if ( num1 >= 5000001){
+           ans = num1*0.5/100;
+        }  else {
+          ans = "please insert numbers"
+        }
+          document.getElementById("result").innerHTML = ans;
+  }
+  function Calculate1(){
+    var num1 = parseInt(document.getElementById("stampNum").value);
+    var ans;
+
+        if (num1 <= 100000){
+           ans = num1*1/100;
+        } else if (num1 >= 100001 && num1 <= 500000){
+           ans = num1*2/100;
+        }  else if (num1 >= 500001 && num1 <= 1000000){
+           ans = num1*3/100;
+        }  else if (num1 >= 1000001 ){
+           ans = num1*4/100;
+        }  else {
+          ans = "please insert numbers"
+        }
+          document.getElementById("result1").innerHTML = ans;
+  }
+  function Calculate2(){
+    var num1 = parseInt(document.getElementById("stampLoaNum").value);
+    var ans;
+
+        if (num1 > 0){
+           ans = num1*0.5/100;
+        }  else {
+          ans = "please insert numbers"
+        }
+          document.getElementById("result2").innerHTML = ans;
+  }
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function showInfo(){
+    var element = document.getElementById("myDIV");
+    element.classList.toggle("show");
+    
+  }
+
+  function showInfo1(){
+    
+    var x = document.getElementById("StampD");
+    x.classList.toggle("show");
+  }
+  function showInfo2(){
+    
+    var x = document.getElementById("StampDLo");
+    x.classList.toggle("show");
+    
+  }
+  function hideMenu(){
+    navLinks.style.right = "-300px";
+  }
+</script>
+
+</body>
+</html>
