@@ -575,6 +575,7 @@ html {
 }
 
 .container {
+  margin: 10px;
   padding: 0 16px;
 }
 .container p {

@@ -13,7 +13,7 @@
 </head>
 <body>
 <section class="header">
-  <nav>
+ <nav>
       <a href="index.html"><img src="image/gold-logo.png"></a>    
     <div class ="nav-links" id="navLinks">
       <i class="fa-regular fa-xmark" onclick="hideMenu()"></i>
@@ -22,15 +22,15 @@
         <li class="dropdown">
           <a href="" class="dropbtn">Our Services</a>
           <div class="dropdown-content">
-          <a href="CONVEYENCING.html">Convenyencing</a>
+          <a href="CONVEYENCING.html">Conveyencing</a>
           <a href="LITIGATION.html">Litigation</a>
           <a href="SYARIAH.html">Syariah</a>
           <a href="CORPORATE&BANKING.html">Corporate & Banking</a>
           <a href="WILL.html">Will, Probate & Estate Administration</a>
-          <a href="LEGALFEECALC.html">Legal Fee Calculator</a>
+   
           </div>
         </li>
-          <li><a href="OURNEWS.html">Our News</a></li>
+         <!--<li><a href="OURNEWS.html">Our News</a></li> -->   
           <li><a href="OURTEAM.html">Our Team</a></li>
 
       </ul>
@@ -43,10 +43,11 @@
   
   <h1>CONVEYENCING</h1>
   <h2>Asset and Estate Matters </h2>
+  <h3>We provide services in connection with residential and commercial properties on a range of issues such as:-</h3>
  
   <ul>
     <li>Sale and Purchase</li>
-    <li>Leases and tenancies of commercial properties</li>
+    <li>Leases and tenancies</li>
     <li>Assignment and vesting of rights in properties</li>
     <li>Alienation, sub-division, partitioning, amalgamation of title</li>
     <li>Land development projects</li>
@@ -148,7 +149,7 @@
       </table>
       </div>
       <form class="form">
-        Property Selling Price : <input type="text" id="stampNum" /><br>
+        Property Purchased Price : <input type="text" id="stampNum" /><br>
         <p>Total Stamp Duty : 
           <span class="formResult" id = "result1"></span>
           </p>
@@ -166,7 +167,7 @@
         
       </div>
       <form class="form">
-        Property Selling Price : <input type="text" id="stampLoaNum" /><br>
+        Loan Sum : <input type="text" id="stampLoaNum" /><br>
         <p>Total Stamp Duty : 
           <span class="formResult" id = "result2"></span>
           </p>
@@ -189,8 +190,8 @@
       <div class="left-sideFoot">
         <div class="details">
           <h3>Main Office</h3>
-          <div class="text-one">No.27, Jalan AP 1C/9, Taman Alam Perdana,</div>
-          <div class="text-two">42300, Puncak Alam Selangor</div>
+          <div class="text-one">No.05-1, Jalan Eco Grandeur 1/9, Eco Grandeur,</div>
+          <div class="text-two">42300, Bandar Puncak Alam, Selangor</div>
           <h3>Branch Office</h3>
           <div class="text-one">No.4, 1st Floor, Jalan Stadium,</div>
           <div class="text-two">05100, Alor Setar, Kedah.</div>
@@ -237,39 +238,64 @@
 
   function Calculate(){
     var num1 = parseInt(document.getElementById("firstNumber").value);
-    var ans;
+    var ans,ansB,ansC,ansD,ansE;
 
         if (num1 <= 500000){
            ans = num1*1/100;
-        } else if (num1 >= 500001 && num1 <= 1000000){
-           ans = num1*0.8/100;
-        }  else if (num1 >= 1000001 && num1 <= 3000000){
-           ans = num1*0.7/100;
-        }  else if (num1 >= 3000001 && num1 <= 5000000){
-           ans = num1*0.6/100;
-        }  else if ( num1 >= 5000001){
-           ans = num1*0.5/100;
-        }  else {
+        }
+        
+        else if (num1 >= 500001 && num1 <= 1000000){
+          ansB = num1*0.8/100;
+           ans = ansB + 5000;
+        } 
+        
+        else if (num1 >= 1000001 && num1 <= 2000000){
+           ansC = num1*0.7/100;
+           ans= ansC + 5000 + 8000;
+        }
+        
+        else if (num1 >= 2000001 && num1 <= 4000000){
+           ansD = num1*0.6/100;
+           ans = ansD + 5000 + 14000 + 8000;
+        }
+        
+        else if ( num1 >= 6500000){
+           ansE = num1*0.5/100;
+           ans = ansE + 5000 + 14000 + 8000 + 24000;
+        } 
+        
+        else {
           ans = "please insert numbers"
         }
-          document.getElementById("result").innerHTML = ans;
+          document.getElementById("result").innerHTML = "RM " + ans;
   }
   function Calculate1(){
     var num1 = parseInt(document.getElementById("stampNum").value);
-    var ans;
+    var ans,ansB,ansC,ansD,ansE;
 
         if (num1 <= 100000){
            ans = num1*1/100;
-        } else if (num1 >= 100001 && num1 <= 500000){
-           ans = num1*2/100;
-        }  else if (num1 >= 500001 && num1 <= 1000000){
-           ans = num1*3/100;
-        }  else if (num1 >= 1000001 ){
-           ans = num1*4/100;
-        }  else {
+        } 
+        
+        else if (num1 >= 100001 && num1 <= 500000){
+           ansB = num1*2/100;
+           ans = ansB + 1000;
+        } 
+        
+        else if (num1 >= 500001 && num1 <= 1000000){
+           ansC = num1*3/100;
+           ans = ansC + 1000 + 10000;
+        } 
+        
+        else if (num1 >= 1000001 ){
+           ansD = num1*4/100;
+           ans = ansD + 1000 + 10000 + 30000;
+        }  
+        
+        else {
           ans = "please insert numbers"
         }
-          document.getElementById("result1").innerHTML = ans;
+          document.getElementById("result1").innerHTML = "RM " + ans;
   }
   function Calculate2(){
     var num1 = parseInt(document.getElementById("stampLoaNum").value);
@@ -280,7 +306,7 @@
         }  else {
           ans = "please insert numbers"
         }
-          document.getElementById("result2").innerHTML = ans;
+          document.getElementById("result2").innerHTML = "RM " + ans;
   }
 
   function showMenu(){

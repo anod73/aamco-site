@@ -22,15 +22,15 @@
         <li class="dropdown">
           <a href="" class="dropbtn">Our Services</a>
           <div class="dropdown-content">
-          <a href="CONVEYENCING.html">Convenyencing</a>
+          <a href="CONVEYENCING.html">Convenyecing</a>
           <a href="LITIGATION.html">Litigation</a>
           <a href="SYARIAH.html">Syariah</a>
           <a href="CORPORATE&BANKING.html">Corporate & Banking</a>
           <a href="WILL.html">Will, Probate & Estate Administration</a>
-          <a href="LEGALFEECALC.html">Legal Fee Calculator</a>
+         
           </div>
         </li>
-          <li><a href="OURNEWS.html">Our News</a></li>
+        <!--<li><a href="OURNEWS.html">Our News</a></li> -->       
           <li><a href="OURTEAM.html">Our Team</a></li>
 
       </ul>
@@ -72,7 +72,7 @@
     Condo Name: <input type="text" id="condoName" /><br><br>
     SPA Date / Booking Fee : <input type="date" id="bookDate" /><br><br>
     Actual Date of Vacant Possession : <input type="date" id="vacantDate" /><br><br>
-    Property Purchase Price : <input type="number " id="price" />
+    Property Purchase Price : <input type="number " id="price" /><br><br>
     Type of Project : <select id="HDA"  >
                     <option  value="24">HDA 24</option>
                     <option  value="36">HDA 36</option>
@@ -140,8 +140,8 @@
       <div class="left-sideFoot">
         <div class="details">
           <h3>Main Office</h3>
-          <div class="text-one">No.27, Jalan AP 1C/9, Taman Alam Perdana,</div>
-          <div class="text-two">42300, Puncak Alam Selangor</div>
+          <div class="text-one">No.05-1, Jalan Eco Grandeur 1/9, Eco Grandeur,</div>
+          <div class="text-two">42300, Bandar Puncak Alam, Selangor</div>
           <h3>Branch Office</h3>
           <div class="text-one">No.4, 1st Floor, Jalan Stadium,</div>
           <div class="text-two">05100, Alor Setar, Kedah.</div>
@@ -198,22 +198,27 @@
     var ComAre;
 
     //process
-    // substract 2 date to get the accumulative days
-    var Difference_In_Time = date2.getTime() - date1.getTime();
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
 
     if(HDA1 == "24"){
       
-      parcel = pp*10/100*Difference_In_Days ;
-      ComAre = "-";
-      document.getElementById("LADp").innerHTML = parcel;
-      document.getElementById("LADca").innerHTML = ComAre;
-    } else if (HDA1 == "36"){
-
-      parcel = pp*10/100*Difference_In_Days ;
+      parcel = (pp*10/100*Difference_In_Days)/365 ;
       ComAre = 10/100*(20/100*pp);
       document.getElementById("LADp").innerHTML = parcel;
       document.getElementById("LADca").innerHTML = ComAre;
+      var Difference_In_Time = date2.getTime() - date1.getTime();
+      var dayDiff = Difference_In_Time / (1000 * 3600 * 24);
+      var Difference_In_Days = dayDiff - 730;
+      
+    } else if (HDA1 == "36"){
+
+      parcel = (pp*10/100*Difference_In_Days)/365 ;
+      ComAre = 10/100*(20/100*pp);
+      document.getElementById("LADp").innerHTML = parcel;
+      document.getElementById("LADca").innerHTML = ComAre;
+      var Difference_In_Time = date2.getTime() - date1.getTime();
+      var dayDiff = Difference_In_Time / (1000 * 3600 * 24);
+      var Difference_In_Days = dayDiff - 1095;
 
     } else {
       txt = "please put in valid info";
