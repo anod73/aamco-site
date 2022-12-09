@@ -233,34 +233,40 @@
 
 
 <!--------- JAVASCRIPT for Toggle Menu ---------->
+<!--calculator is correct but customer decide to turn it off for a while-->
+
 <script>
   var navLinks = document.getElementById("navLinks");
-
+ /*
   function Calculate(){
     var num1 = parseInt(document.getElementById("firstNumber").value);
-    var ans,ansB,ansC,ansD,ansE;
+    var ans,ansB,ansC,ansD,ansE,ansB1,ansC1,ansD1,ansE1;
 
         if (num1 <= 500000){
            ans = num1*1/100;
         }
         
         else if (num1 >= 500001 && num1 <= 1000000){
-          ansB = num1*0.8/100;
+          ansB1 = num1 - 500000;
+          ansB = ansB1*0.8/100;
            ans = ansB + 5000;
         } 
         
         else if (num1 >= 1000001 && num1 <= 2000000){
-           ansC = num1*0.7/100;
+          ansC1 = num1 - 500000 - 1000000;
+           ansC = ansC1*0.7/100;
            ans= ansC + 5000 + 8000;
         }
         
         else if (num1 >= 2000001 && num1 <= 4000000){
-           ansD = num1*0.6/100;
+          ansD1 = num1 - 500000 - 1000000 - 2000000;
+           ansD = ansD1*0.6/100;
            ans = ansD + 5000 + 14000 + 8000;
         }
         
         else if ( num1 >= 6500000){
-           ansE = num1*0.5/100;
+          ansE1 = num1 - 500000 - 1000000 - 2000000 - 4000000;
+           ansE = ansE1*0.5/100;
            ans = ansE + 5000 + 14000 + 8000 + 24000;
         } 
         
@@ -271,24 +277,27 @@
   }
   function Calculate1(){
     var num1 = parseInt(document.getElementById("stampNum").value);
-    var ans,ansB,ansC,ansD,ansE;
+    var ans,ansB,ansC,ansD,ansE,ansB1,ansC1,ansD1,ansE1;
 
         if (num1 <= 100000){
            ans = num1*1/100;
         } 
         
         else if (num1 >= 100001 && num1 <= 500000){
-           ansB = num1*2/100;
+          ansB1 = num1 - 100000;
+           ansB = ansB1*2/100;
            ans = ansB + 1000;
         } 
         
         else if (num1 >= 500001 && num1 <= 1000000){
-           ansC = num1*3/100;
+          ansC1 = num1 - 100000 - 500000;
+           ansC = ansC1*3/100;
            ans = ansC + 1000 + 10000;
         } 
         
         else if (num1 >= 1000001 ){
-           ansD = num1*4/100;
+          ansD1 = num1 - 100000 - 500000 - 1000000;
+           ansD = ansD1*4/100;
            ans = ansD + 1000 + 10000 + 30000;
         }  
         
@@ -309,6 +318,8 @@
           document.getElementById("result2").innerHTML = "RM " + ans;
   }
 
+  */
+ 
   function showMenu(){
     navLinks.style.right = "0";
   }
